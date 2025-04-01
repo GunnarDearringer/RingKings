@@ -95,6 +95,42 @@
     .button:hover {
       background-color: #ff1f1f;
     }
+    /* Fade-in animation for tab buttons */
+.tabs button {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.tabs button:nth-child(1) { animation-delay: 0.1s; }
+.tabs button:nth-child(2) { animation-delay: 0.2s; }
+.tabs button:nth-child(3) { animation-delay: 0.3s; }
+.tabs button:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-up + fade for product cards */
+.product {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.product.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Product hover effect */
+.product:hover {
+  box-shadow: 0 0 15px #d40000;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
   </style>
 </head>
 
@@ -171,24 +207,28 @@
   </p>
   <a class="button" href="https://amzn.to/4lc7T3d">Buy on Amazon</a>
 </div>
-
-
-    
 <script>
   function showCategory(category) {
-    // Hide all products
     const allProducts = document.querySelectorAll('.product');
-    allProducts.forEach(product => product.style.display = 'none');
+    allProducts.forEach(product => {
+      product.style.display = 'none';
+      product.classList.remove('show');
+    });
 
-    // Show selected category
+    let selected;
     if (category === 'all') {
-      allProducts.forEach(product => product.style.display = 'block');
+      selected = allProducts;
     } else {
-      const selected = document.querySelectorAll('.' + category);
-      selected.forEach(product => product.style.display = 'block');
+      selected = document.querySelectorAll('.' + category);
     }
 
-    // Update tab button styles
+    selected.forEach(product => {
+      product.style.display = 'block';
+      setTimeout(() => {
+        product.classList.add('show');
+      }, 50);
+    });
+
     const buttons = document.querySelectorAll('.tabs button');
     buttons.forEach(btn => btn.classList.remove('active'));
 
@@ -198,7 +238,6 @@
     }
   }
 
-  // Show all by default
   window.onload = () => showCategory('all');
 </script>
 </body>
