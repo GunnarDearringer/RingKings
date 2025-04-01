@@ -19,6 +19,9 @@
 .tabs button:hover {
   background-color: #d40000;
 } 
+ .tabs button.active {
+  background-color: #d40000;
+}  
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
@@ -121,18 +124,29 @@
     
 <script>
   function showCategory(category) {
+    // Hide all products
     const allProducts = document.querySelectorAll('.product');
+    allProducts.forEach(product => product.style.display = 'none');
 
+    // Show selected category
     if (category === 'all') {
       allProducts.forEach(product => product.style.display = 'block');
     } else {
-      allProducts.forEach(product => product.style.display = 'none');
       const selected = document.querySelectorAll('.' + category);
       selected.forEach(product => product.style.display = 'block');
     }
+
+    // Update tab button styles
+    const buttons = document.querySelectorAll('.tabs button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    const activeButton = document.querySelector(`.tabs button[onclick="showCategory('${category}')"]`);
+    if (activeButton) {
+      activeButton.classList.add('active');
+    }
   }
 
-  // Show all products by default on page load
+  // Show all by default
   window.onload = () => showCategory('all');
 </script>
 </body>
