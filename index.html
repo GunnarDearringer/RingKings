@@ -69,7 +69,19 @@
     }
   </style>
 </head>
-<body>
+<script>
+  function showCategory(category) {
+    const allProducts = document.querySelectorAll('.product');
+    allProducts.forEach(product => product.style.display = 'none');
+
+    const selected = document.querySelectorAll('.' + category);
+    selected.forEach(product => product.style.display = 'block');
+  }
+
+  // Optional: Show gloves by default on page load
+  window.onload = () => showCategory('gloves');
+</script>
+  <body>
 
   <header>
     <h1>Ring Kings</h1>
@@ -116,3 +128,6 @@
   <p>Your wrap review...</p>
   <a class="button" href="https://amzn.to/4lc7T3d">Buy on Amazon</a>
 </div>
+
+</body>
+</html>
