@@ -34,10 +34,14 @@
     display: block;
   }
 }
-.text-toggle {
-  display: block !important;
+@media screen and (max-width: 768px) {
+  .text-toggle {
+    display: block !important;
+  }
 }
-
+.text-toggle {
+  bottom: 80px; /* was 20px */
+}
 /* Class that increases font sizes */
 body.big-text {
   font-size: 1.25em;
