@@ -3,6 +3,22 @@
 <head>
   <title>Ring Kings - Boxing Gear Reviews</title>
   <style>
+  .tabs {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.tabs button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tabs button:hover {
+  background-color: #d40000;
+} 
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
@@ -68,7 +84,8 @@
   <button onclick="showCategory('wraps')">Wraps</button>
 </div>
   
-    <div class="product Gloves">
+    <!-- Gloves Section -->
+<div class="product Gloves">
       <h2>Everlast Pro Style Training Gloves</h2>
       <img src="https://m.media-amazon.com/images/I/71ZMSXEgvBL._AC_SX425_.jpg" alt="RDX Boxing Gloves">
       <img src="https://m.media-amazon.com/images/I/71i3GUW1e4L._AC_SX425_.jpg" alt="RDX Boxing Gloves">
@@ -94,3 +111,21 @@
   <a class="button" href="https://amzn.to/4cesiQX" target="_blank">Buy on Amazon</a>
 </div>
 
+
+
+
+<!-- Bags Section -->
+<div class="product bags" style="display:none;">
+  <h2>Ringside Heavy Bag</h2>
+  <img src="https://..." width="400">
+  <p>Your bag review...</p>
+  <a class="button" href="#">Buy on Amazon</a>
+</div>
+
+<!-- Wraps Section -->
+<div class="product wraps" style="display:none;">
+  <h2>Everlast Hand Wraps</h2>
+  <img src="https://..." width="400">
+  <p>Your wrap review...</p>
+  <a class="button" href="#">Buy on Amazon</a>
+</div>
