@@ -69,20 +69,7 @@
     }
   </style>
 </head>
-<script>
-  function showCategory(category) {
-    const allProducts = document.querySelectorAll('.product');
 
-    if (category === 'all') {
-      allProducts.forEach(product => product.style.display = 'block');
-    } else {
-      allProducts.forEach(product => product.style.display = 'none');
-      const selected = document.querySelectorAll('.' + category);
-      selected.forEach(product => product.style.display = 'block');
-    }
-
-  window.onload = () => showCategory('all'); // Show everything by default
-</script>
   <body>
 
   <header>
@@ -130,5 +117,23 @@
   <a class="button" href="https://amzn.to/4lc7T3d">Buy on Amazon</a>
 </div>
 
+
+    
+<script>
+  function showCategory(category) {
+    const allProducts = document.querySelectorAll('.product');
+
+    if (category === 'all') {
+      allProducts.forEach(product => product.style.display = 'block');
+    } else {
+      allProducts.forEach(product => product.style.display = 'none');
+      const selected = document.querySelectorAll('.' + category);
+      selected.forEach(product => product.style.display = 'block');
+    }
+  }
+
+  // Show all products by default on page load
+  window.onload = () => showCategory('all');
+</script>
 </body>
 </html>
