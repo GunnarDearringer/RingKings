@@ -72,14 +72,16 @@
 <script>
   function showCategory(category) {
     const allProducts = document.querySelectorAll('.product');
-    allProducts.forEach(product => product.style.display = 'none');
 
-    const selected = document.querySelectorAll('.' + category);
-    selected.forEach(product => product.style.display = 'block');
-  }
+    if (category === 'all') {
+      allProducts.forEach(product => product.style.display = 'block');
+    } else {
+      allProducts.forEach(product => product.style.display = 'none');
+      const selected = document.querySelectorAll('.' + category);
+      selected.forEach(product => product.style.display = 'block');
+    }
 
-  // Optional: Show gloves by default on page load
-  window.onload = () => showCategory('gloves');
+  window.onload = () => showCategory('all'); // Show everything by default
 </script>
   <body>
 
@@ -88,9 +90,8 @@
     <p>The Best Boxing Gear Reviews & Affiliate Picks</p>
   </header>
 
-  <div class="container">
-
-    <div class="tabs">
+  <div class="tabs">
+  <button onclick="showCategory('all')">All</button>
   <button onclick="showCategory('gloves')">Gloves</button>
   <button onclick="showCategory('bags')">Bags</button>
   <button onclick="showCategory('wraps')">Wraps</button>
