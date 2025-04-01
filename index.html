@@ -130,17 +130,40 @@
   transform: translateY(-5px);
   transition: all 0.3s ease;
 }
+footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.95em;
+  border-top: 1px solid #333;
+}
 
-  </style>
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #ff3c3c;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #ff1f1f;
+}
+  
+</style>
 </head>
 
   <body>
-
+<a id="top"></a>
   <header style="display: flex; align-items: center; flex-direction: column;">
   <h1 style="margin: 10px 0 5px;">Ring Kings</h1>
   <p style="font-size: 1.2em; letter-spacing: 1px;">Professional Boxing Gear Reviews</p>
 </header>
-
   <div class="tabs">
   <button onclick="showCategory('all')">All</button>
   <button onclick="showCategory('gloves')">Gloves</button>
@@ -237,8 +260,15 @@
       activeButton.classList.add('active');
     }
   }
-
   window.onload = () => showCategory('all');
 </script>
+<footer>
+  <p>© 2025 Ring Kings. Created by Gunnar Dearringer.</p>
+  <div class="footer-links">
+    <a href="https://github.com/GunnarDearringer" target="_blank">GitHub</a>
+    <a href="https://www.youtube.com/@GunnarGames" target="_blank">YouTube</a>
+    <a href="#top">Back to Top</a>
+  </div>
+</footer>
 </body>
 </html>
