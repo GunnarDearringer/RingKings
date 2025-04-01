@@ -7,6 +7,39 @@
 <meta name="author" content="Gunnar Dearringer">
   <title>Ring Kings - Boxing Gear Reviews</title>
   <style>
+ .site-header {
+  background-color: #d40000;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-logo {
+  width: 70px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: white;
+  animation: bounceIn 0.7s ease;
+}
+
+.site-header p {
+  margin: 5px 0 
+
   .text-toggle {
   display: none; /* hidden by default */
   position: fixed;
@@ -210,9 +243,14 @@ footer {
 
   <body>
 <a id="top"></a>
-  <header style="display: flex; align-items: center; flex-direction: column;">
-  <h1 style="margin: 10px 0 5px;">Ring Kings</h1>
-  <p style="font-size: 1.2em; letter-spacing: 1px;">Professional Boxing Gear Reviews</p>
+ <header class="site-header">
+  <div class="logo-title">
+    <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-40a4-5230-b8f0-581faf3376a4/raw?se=2025-04-01T21%3A42%3A35Z&sp=r&sv=2024-08-04&sr=b&scid=a77a4190-2565-5947-975b-15031f1b7494&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-01T20%3A20%3A59Z&ske=2025-04-02T20%3A20%3A59Z&sks=b&skv=2024-08-04&sig=3LdfHR1k7zbygV7qGiUSTbvhSSDTf/4Dtezb3d7T6R8%3D" alt="Ring Kings Logo" class="site-logo">
+    <div>
+      <h1>Ring Kings</h1>
+      <p>Professional Boxing Gear Reviews</p>
+    </div>
+  </div>
 </header>
   <button class="text-toggle" onclick="toggleTextSize()">🅰️ Text Size</button>
    <div class="tabs">
