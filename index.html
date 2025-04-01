@@ -7,7 +7,53 @@
 <meta name="author" content="Gunnar Dearringer">
   <title>Ring Kings - Boxing Gear Reviews</title>
   <style>
-  header h1 {
+  .text-toggle {
+  display: none; /* hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d40000;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1em;
+  z-index: 999;
+  cursor: pointer;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s ease;
+}
+
+.text-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* Only show on screens smaller than 768px (phones) */
+@media (max-width: 768px) {
+  .text-toggle {
+    display: block;
+  }
+}
+
+/* Class that increases font sizes */
+body.big-text {
+  font-size: 1.25em;
+}
+
+body.big-text h1 {
+  font-size: 2.8em;
+}
+
+body.big-text h2 {
+  font-size: 2em;
+}
+
+body.big-text p,
+body.big-text li,
+body.big-text a {
+  font-size: 1.15em;
+}
+   header h1 {
   animation: bounceIn 0.7s ease;
 }
 
@@ -168,7 +214,8 @@ footer {
   <h1 style="margin: 10px 0 5px;">Ring Kings</h1>
   <p style="font-size: 1.2em; letter-spacing: 1px;">Professional Boxing Gear Reviews</p>
 </header>
-  <div class="tabs">
+  <button class="text-toggle" onclick="toggleTextSize()">🅰️ Text Size</button>
+   <div class="tabs">
   <button onclick="showCategory('all')">All</button>
   <button onclick="showCategory('gloves')">Gloves</button>
   <button onclick="showCategory('bags')">Bags</button>
@@ -286,5 +333,11 @@ footer {
     <a href="#top">Back to Top</a>
   </div>
 </footer>
+<script>
+  function toggleTextSize() {
+    document.body.classList.toggle('big-text');
+  }
+</script>
+
 </body>
 </html>
