@@ -18,7 +18,15 @@
     flex: 0 1 calc(45% - 20px);
   }
 }
-  .text-toggle {
+ @media (min-width: 1500px) {
+  .product img {
+    width: 66.6%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+   .text-toggle {
   display: none; /* hidden by default */
   position: fixed;
   top: 40px;
@@ -137,9 +145,9 @@ body.big-text a {
       box-shadow: 0 0 10px #000;
     }
     .product img {
-      max-width: 100%;
-      border-radius: 6px;
-    }
+  max-width: 100%;
+  height: auto;
+}
     .product h2 {
       color: #ff3c3c;
     }
