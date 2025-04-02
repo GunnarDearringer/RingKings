@@ -81,6 +81,7 @@ body.big-text a {
   text-align: center;
   margin: 40px 0; /* adds top and bottom spacing */
 }
+  <button onclick="showCategory('accessories')">Accessories</button> 
 .tabs button {
   background-color: #333;
   color: white;
@@ -292,7 +293,16 @@ footer {
   </p>
   <a class="button" href="https://amzn.to/4lc7T3d">Buy on Amazon</a>
 </div>
-<script>
+<!-- Accessories Section -->
+<div class="product accessories" style="display:none;">
+  <h2>Jump Rope Pro Speed</h2>
+  <img src="https://m.media-amazon.com/images/I/71lPSep1-GL._AC_SX679_.jpg" width="400">
+  <p>
+    A fast, tangle-free jump rope perfect for boxing warmups and conditioning. Comfortable handles and adjustable length make it great for beginners and pros alike.
+  </p>
+  <a class="button" href="https://www.amazon.com/dp/B07DK8TSZC">Buy on Amazon</a>
+</div>
+ <script>
   function showCategory(category) {
     const allProducts = document.querySelectorAll('.product');
     allProducts.forEach(product => {
