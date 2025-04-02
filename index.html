@@ -7,7 +7,20 @@
 <meta name="author" content="Gunnar Dearringer">
   <title>Ring Kings - Boxing Gear Reviews</title>
   <style>
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* spacing between items */
+}
+
 @media (min-width: 1500px) {
+  .product {
+    flex: 0 1 calc(50% - 30px); /* two items side by side */
+  }
+}
+
+   @media (min-width: 1500px) {
   body {
     font-size: 0.9em;
   }
@@ -321,7 +334,8 @@ footer {
 </div>
 
 <!-- Bags Section -->
-<div class="product bags" style="display:none;">
+<div class="product-grid">
+ <div class="product bags" style="display:none;">
   <h2>UFC Octagon Camo Heavy Bag - 70 lbs</h2>
   <img src="https://m.media-amazon.com/images/I/61DRTXnl76L._AC_SX569_.jpg" width="175">
   <img src="https://m.media-amazon.com/images/I/71wy4+P6QZL._AC_SX569_.jpg" width="400">
@@ -377,6 +391,7 @@ footer {
     A fast, tangle-free jump rope perfect for boxing warmups and conditioning. Comfortable handles and adjustable length make it great for beginners and pros alike.
   </p>
   <a class="button" href="https://www.amazon.com/dp/B07DK8TSZC">Buy on Amazon</a>
+</div>
 </div>
 </div>
  <script>
