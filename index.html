@@ -80,8 +80,7 @@ body.big-text a {
   .tabs {
   text-align: center;
   margin: 40px 0; /* adds top and bottom spacing */
-}
-  <button onclick="showCategory('accessories')">Accessories</button> 
+} 
 .tabs button {
   background-color: #333;
   color: white;
@@ -153,14 +152,6 @@ body.big-text a {
   animation: fadeIn 0.5s ease forwards;
 }
 
-<div class="tabs">
-  <button onclick="showCategory('all')">All</button>
-  <button onclick="showCategory('gloves')">Gloves</button>
-  <button onclick="showCategory('bags')">Bags</button>
-  <button onclick="showCategory('wraps')">Wraps</button>
-  <button onclick="showCategory('accessories')">Accessories</button>
-</div>
-
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -219,12 +210,14 @@ footer {
   <h1 style="margin: 10px 0 5px;">Ring Kings</h1>
   <p style="font-size: 1.2em; letter-spacing: 1px;">Professional Boxing Gear Reviews</p>
 </header>
-  <button class="text-toggle" onclick="toggleTextSize()">🅰️ Text Size</button>
+   <button onclick="showCategory('accessories')">Accessories</button>
+   <button class="text-toggle" onclick="toggleTextSize()">🅰️ Text Size</button>
    <div class="tabs">
   <button onclick="showCategory('all')">All</button>
   <button onclick="showCategory('gloves')">Gloves</button>
   <button onclick="showCategory('bags')">Bags</button>
   <button onclick="showCategory('wraps')">Wraps</button>
+  <button onclick="showCategory('accessories')">Accessories</button>
 </div>
   
   <!-- Gloves Section -->
