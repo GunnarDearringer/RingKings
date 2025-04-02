@@ -7,7 +7,26 @@
 <meta name="author" content="Gunnar Dearringer">
   <title>Ring Kings - Boxing Gear Reviews</title>
   <style>
- 
+ .product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* On big screens, show products in 2 columns */
+@media (min-width: 1500px) {
+  .product-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product-grid .product {
+    flex: 0 1 45%;
+    margin: 20px;
+  }
+}
+
   .text-toggle {
   display: none; /* hidden by default */
   position: fixed;
@@ -226,7 +245,8 @@ footer {
 </div>
   
   <!-- Gloves Section -->
-<div class="product gloves">
+<div class="product-grid">
+ <div class="product gloves">
   <h2>Venum Challenger 2.0 Boxing Gloves</h2>
   <img src="https://m.media-amazon.com/images/I/81bTHaa7LWL._AC_SX569_.jpg" width="400">
   <img src="https://m.media-amazon.com/images/I/81woohigX4L._AC_SX569_.jpg" width="400"> 
@@ -335,6 +355,7 @@ footer {
     A fast, tangle-free jump rope perfect for boxing warmups and conditioning. Comfortable handles and adjustable length make it great for beginners and pros alike.
   </p>
   <a class="button" href="https://www.amazon.com/dp/B07DK8TSZC">Buy on Amazon</a>
+</div>
 </div>
  <script>
   function showCategory(category) {
