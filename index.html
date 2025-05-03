@@ -1,124 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <link rel="icon" href="favicon.ico" type="image/x-icon">
- <meta name="description" content="Ring Kings offers the best beginner boxing gear reviews, gloves, wraps, and bags. Start your training with the right gear.">
-<meta name="keywords" content="boxing gear, beginner boxing gloves, best wraps 2025, heavy bags, ring kings">
-<meta name="author" content="Gunnar Dearringer">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ring Kings - Boxing Gear Reviews</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="description" content="Ring Kings offers the best beginner boxing gear reviews, gloves, wraps, and bags. Start your training with the right gear.">
+  <meta name="keywords" content="boxing gear, beginner boxing gloves, best wraps 2025, heavy bags, ring kings">
+  <meta name="author" content="Gunnar Dearringer">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-.product-grid {
-  display: block;
-}
-   .text-toggle {
-  display: none; /* hidden by default */
-  position: fixed;
-  top: 40px;
-  right: 40px;
-  background-color: #d40000;
-  color: white;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-size: 2em;
-  z-index: 999;
-  cursor: pointer;
-  box-shadow: 0 0 10px #000;
-  transition: transform 0.3s ease;
-}
-
-.text-toggle:hover {
-  transform: scale(1.05);
-}
-
-/* Only show on screens smaller than 768px (phones) */
-@media (max-width: 1200px) {
-  .text-toggle {
-    display: block;
-  }
-}
-
-/* Class that increases font sizes */
-body.big-text {
-  font-size: 1.25em;
-}
-
-body.big-text h1 {
-  font-size: 2.8em;
-}
-
-body.big-text h2 {
-  font-size: 2em;
-}
-
-body.big-text p,
-body.big-text li,
-body.big-text a {
-  font-size: 1.15em;
-}
-   header h1 {
-  animation: bounceIn 0.7s ease;
-}
-
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-    header h1:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #000;
-  transform: scale(1.03);
-  transition: all 0.3s ease;
-}
-  .tabs {
-  text-align: center;
-  margin: 40px 0; /* adds top and bottom spacing */
-} 
-.tabs button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 15px 30px;  /* bigger buttons */
-  margin: 10px;
-  border-radius: 8px;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-.tabs button:hover {
-  background-color: #d40000;
-} 
- .tabs button.active {
-  background-color: #d40000;
-}  
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #111;
       color: #fff;
+      scroll-behavior: smooth;
     }
     header {
       background-color: #d40000;
       padding: 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
     header h1 {
       margin: 0;
       font-size: 2.5em;
+      animation: bounceIn 0.7s ease;
     }
+    header h1:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #000;
+      transform: scale(1.03);
+      transition: all 0.3s ease;
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    .text-toggle {
+      display: none;
+      position: fixed;
+      top: 40px;
+      right: 40px;
+      background-color: #d40000;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 2em;
+      z-index: 999;
+      cursor: pointer;
+      box-shadow: 0 0 10px #000;
+      transition: transform 0.3s ease;
+    }
+    .text-toggle:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 1200px) {
+      .text-toggle { display: block; }
+    }
+    body.big-text { font-size: 1.25em; }
+    body.big-text h1 { font-size: 2.8em; }
+    body.big-text h2 { font-size: 2em; }
+    body.big-text p,
+    body.big-text li,
+    body.big-text a { font-size: 1.15em; }
     .container {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
+    }
+    .tabs {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .tabs button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.6s ease forwards;
+      transition: background-color 0.2s ease;
+    }
+    .tabs button:hover,
+    .tabs button.active {
+      background-color: #d40000;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .product-grid {
+      display: block;
     }
     .product {
       background-color: #1a1a1a;
@@ -127,11 +113,26 @@ body.big-text a {
       padding: 20px;
       margin-bottom: 30px;
       box-shadow: 0 0 10px #000;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    .product.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .product:hover {
+      box-shadow: 0 0 15px #d40000;
+      transform: translateY(-5px);
     }
     .product img {
-  max-width: 100%;
-  height: auto;
-}
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .product img:hover {
+      transform: scale(1.03);
+    }
     .product h2 {
       color: #ff3c3c;
     }
@@ -144,248 +145,72 @@ body.big-text a {
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
     }
     .button:hover {
       background-color: #ff1f1f;
+      box-shadow: 0 0 10px #ff1f1f;
     }
-    /* Fade-in animation for tab buttons */
-.tabs button {
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Slide-up + fade for product cards */
-.product {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-}
-
-.product.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Optional: Product hover effect */
-.product:hover {
-  box-shadow: 0 0 15px #d40000;
-  transform: translateY(-5px);
-  transition: all 0.3s ease;
-}
-footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-  padding: 30px 20px;
-  text-align: center;
-  font-size: 0.95em;
-  border-top: 1px solid #333;
-}
-
-.footer-links {
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: #ff3c3c;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #fff;
-  text-shadow: 0 0 5px #ff1f1f;
-}
-  
-</style>
+    footer {
+      background-color: #1a1a1a;
+      color: #ccc;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95em;
+      border-top: 1px solid #333;
+    }
+    .footer-links {
+      margin-top: 10px;
+    }
+    .footer-links a {
+      color: #ff3c3c;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #ff1f1f;
+    }
+  </style>
 </head>
+<body>
+  <!-- Paste your HTML body content here (header, buttons, product cards, etc.) -->
+  <!-- This template already includes the upgraded styling -->
 
-  <body>
-<a id="top"></a>
- <header style="display: flex; align-items: center; flex-direction: column;">
-  <img 
-    src="https://github.com/GunnarDearringer/RingKings/blob/main/ChatGPT%20Image%20Apr%201,%202025,%2004_17_12%20PM.png?raw=true" 
-    alt="Ring Kings Logo" 
-    width="100" 
-    style="margin-bottom: 10px; border-radius: 12px; box-shadow: 0 0 10px #000;"
-  >
-  <h1 style="margin: 10px 0 5px;">Ring Kings</h1>
-  <p style="font-size: 1.2em; letter-spacing: 1px;">Professional Boxing Gear Reviews</p>
-</header>
-   <button class="text-toggle" onclick="toggleTextSize()">🅰️ Text Size</button>
-   <div class="tabs">
-  <button onclick="showCategory('all')">All</button>
-  <button onclick="showCategory('gloves')">Gloves</button>
-  <button onclick="showCategory('bags')">Bags</button>
-  <button onclick="showCategory('wraps')">Wraps</button>
-  <button onclick="showCategory('accessories')">Accessories</button>
-</div>
-  
-  <!-- Gloves Section -->
-<div class="product-grid">
- <div class="product gloves">
-  <h2>Venum Challenger 2.0 Boxing Gloves</h2>
-  <img src="https://m.media-amazon.com/images/I/81bTHaa7LWL._AC_SX569_.jpg" width="400">
-  <img src="https://m.media-amazon.com/images/I/81woohigX4L._AC_SX569_.jpg" width="400"> 
-<p>
-    The <strong>Venum Challenger 2.0</strong> gloves offer high-quality construction at an affordable price, making them a favorite for beginners and intermediate fighters alike.
-  </p>
-  <p>
-    Built with durable synthetic leather and <strong>triple-density foam</strong>, they deliver solid shock absorption and knuckle protection whether you're hitting the bag or sparring.
-  </p>
-  <p>
-    The large Velcro strap provides great wrist support and a secure fit. The design is sleek and aggressive, and they come in several color options to match your style.
-  </p>
-  <p>
-    Whether you're boxing, doing Muay Thai, or just training for fitness, these gloves are a great pick for reliable performance at a great value.
-  </p>
-  <a class="button" href="https://amzn.to/428L3AQ">$55.99 on Amazon</a>
-</div>
- <div class="product gloves">
-  <h2>RDX Ego Boxing Gloves</h2>
-  <img src="https://m.media-amazon.com/images/I/71ZMSXEgvBL._AC_SX425_.jpg" width="400">
-  <img src="https://m.media-amazon.com/images/I/71V8dsxPsrL._AC_SL1500_.jpg" width="400"> 
- <p>
-    The <strong>RDX Ego Boxing Gloves</strong> are hands-down one of the best gloves for beginners — combining comfort, durability, and great protection without a high price tag.
-  </p>
-  <p>
-    These gloves are made from tough Maya Hide leather, which means they can take a beating and last for months of training. Inside, they’re packed with <strong>multi-layered padding</strong> that absorbs shock, helping protect your hands whether you're hitting a heavy bag, mitts, or sparring.
-  </p>
-  <p>
-    One of the biggest advantages for beginners is the <strong>extra-secure Velcro wrist strap</strong>. It keeps your wrist aligned properly and reduces the chance of injury, especially if your form isn’t perfect yet. Plus, the built-in ventilation helps keep your hands cool and dry during long sessions.
-  </p>
-  <p>
-    If you’re just getting into boxing, kickboxing, or fitness training and want a glove that feels great, looks clean, and won’t fall apart after a few weeks — this is your go-to.
-  </p>
-  <a class="button" href="https://amzn.to/3Rsyk74">$35.99 on Amazon</a>
-</div>
-    <div class="product gloves">
-  <h2>RIVAL Boxing RB10 Intelli-Shock Bag Gloves</h2>
-  <img src="https://m.media-amazon.com/images/I/71R6tjwHYIL._AC_SX569_.jpg" width="400">
-  <img src="https://m.media-amazon.com/images/I/716nI7dRghL._AC_SX569_.jpg" width="400"> 
-    <p>
-    The <strong>Venum Challenger 2.0 Gloves</strong> are the perfect balance between comfort, durability, and serious style. Designed in Thailand and made with premium synthetic leather, they’re ideal for boxing, kickboxing, and MMA training.
-  </p>
-  <p>
-    With triple-density foam padding, your hands and knuckles are protected through every jab, hook, and uppercut. The large Velcro wrist strap keeps your wrist stable and supported, helping you train longer and harder with less risk.
-  </p>
-  <p>
-    While it’s a premium option, this glove is built to last for years and delivers unmatched comfort — making it a smart investment for serious fighters.
-  </p>
-  <a class="button" href="https://amzn.to/4cesiQX">$224.99 on Amazon</a>
-</div>
-
-<!-- Bags Section -->
- <div class="product bags" style="display:none;">
-  <h2>UFC Octagon Camo Heavy Bag - 70 lbs</h2>
-  <img src="https://m.media-amazon.com/images/I/61DRTXnl76L._AC_SX569_.jpg" width="175">
-  <img src="https://m.media-amazon.com/images/I/71wy4+P6QZL._AC_SX569_.jpg" width="400">
-  <ul>
-    <li><strong>Ultra-tough outer shell</strong> made with PVC/polyester – built for years of punishment</li>
-    <li><strong>Pre-filled</strong> to 70 lbs – great resistance with realistic swing</li>
-    <li><strong>Camo octagon design</strong> + UFC branding – bold, pro-grade look</li>
-    <li><strong>Includes heavy-duty chains & swivel</strong> – easy to hang right away</li>
-    <li><strong>Perfect for kicks, knees, combos</strong> – not just punching</li>
-  </ul>
-  <p>
-    Whether you're a striker or an MMA fighter, this bag delivers both <strong>durability</strong> and <strong>style</strong>. It’s one of the slickest-looking bags in its price range and holds up through intense sessions.
-  </p>
-  <a class="button" href="https://amzn.to/4hY30bi">$169.99 on Amazon</a>
-</div>
-<div class="product bags" style="display:none;">
-  <h2>UFC Octagon Lava Heavy Bag - 100LB</h2>
-  <img src="https://m.media-amazon.com/images/I/81mJlfsZBNL._AC_SX569_.jpg" width="350">
-  <img src="https://m.media-amazon.com/images/I/71EgNUL56yL._AC_SX569_.jpg" width="400">
-   <ul>
-    <li><strong>Heavy-duty synthetic leather</strong> – built to handle years of punches, kicks, elbows, and knees</li>
-    <li><strong>100LB pre-filled weight</strong> – great resistance and swing for realistic striking</li>
-    <li><strong>Bold lava design</strong> – adds serious attitude to your training space</li>
-    <li><strong>Reinforced straps + chain & swivel included</strong> – hang it up and start hitting right away</li>
-    <li><strong>Ideal for MMA and boxing training</strong> – works for all striking styles</li>
-  </ul>
-  <p>
-    This bag isn’t just about performance — it looks 🔥 with its crazy design and bold UFC branding. If you're serious about training and want a bag that can take punishment, the <strong>Octagon Lava 100LB</strong> is a beast.
-  </p>
-  <a class="button" href="https://amzn.to/3RCD4XH">$169.99 on Amazon</a>
-</div>
-<!-- Wraps Section -->
-<div class="product wraps" style="display:none;">
-  <h2>Meister 180" Hand Wraps</h2>
-  <img src="https://m.media-amazon.com/images/I/71u4xVygi5L._AC_SX425_PIcountsize-2,TopRight,0,0_SH20_.jpg" width="400">
-  <img src="https://m.media-amazon.com/images/I/71SFG+weFBL._AC_SX425_.jpg" width="400">
-   <p>
-    The <strong>Meister 180" Hand Wraps</strong> are a must-have for any boxer, MMA athlete, or kickboxer. These wraps offer just the right amount of stretch with their semi-elastic cotton-blend material — giving you a snug, custom fit every time.
-  </p>
-  <p>
-    At 180 inches long, they provide full wrist and knuckle protection without adding bulk. The wraps are breathable, durable, and stay in place throughout your training session thanks to the strong hook-and-loop closure.
-  </p>
-  <p>
-    Whether you’re hitting the heavy bag or sparring, Meister wraps deliver premium support and comfort — all at a price that’s hard to beat.
-  </p>
-  <a class="button" href="https://amzn.to/4lc7T3d">$8.99 on Amazon</a>
-</div>
-<!-- Accessories Section -->
-<div class="product accessories" style="display:none;">
-  <h2>Jump Rope Pro Speed</h2>
-  <img src="https://m.media-amazon.com/images/I/71lPSep1-GL._AC_SX679_.jpg" width="400">
-  <p>
-    A fast, tangle-free jump rope perfect for boxing warmups and conditioning. Comfortable handles and adjustable length make it great for beginners and pros alike.
-  </p>
-  <a class="button" href="https://www.amazon.com/dp/B07DK8TSZC">Buy on Amazon</a>
-</div>
-</div>
- <script>
-  function showCategory(category) {
-    const allProducts = document.querySelectorAll('.product');
-    allProducts.forEach(product => {
-      product.style.display = 'none';
-      product.classList.remove('show');
-    });
-
-    let selected;
-    if (category === 'all') {
-      selected = allProducts;
-    } else {
-      selected = document.querySelectorAll('.' + category);
+  <script>
+    function toggleTextSize() {
+      document.body.classList.toggle('big-text');
     }
 
-    selected.forEach(product => {
-      product.style.display = 'block';
-      setTimeout(() => {
-        product.classList.add('show');
-      }, 50);
-    });
+    function showCategory(category) {
+      const allProducts = document.querySelectorAll('.product');
+      allProducts.forEach(product => {
+        product.style.display = 'none';
+        product.classList.remove('show');
+      });
 
-    const buttons = document.querySelectorAll('.tabs button');
-    buttons.forEach(btn => btn.classList.remove('active'));
+      let selected = category === 'all' ? allProducts : document.querySelectorAll('.' + category);
+      selected.forEach(product => {
+        product.style.display = 'block';
+        setTimeout(() => product.classList.add('show'), 50);
+      });
 
-    const activeButton = document.querySelector(`.tabs button[onclick="showCategory('${category}')"]`);
-    if (activeButton) {
-      activeButton.classList.add('active');
+      document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.tabs button[onclick="showCategory('${category}')"]`)?.classList.add('active');
     }
-  }
-  window.onload = () => showCategory('all');
-</script>
-<footer>
-  <p>© 2025 Ring Kings. Created by Gunnar Dearringer.</p>
- <div class="footer-links">
-  <a href="mailto:Gunnar.dearringer@gmail.com">Contact Me</a>
-  <a href="https://github.com/GunnarDearringer" target="_blank">GitHub</a>
-  <a href="https://www.youtube.com/@Ring_Kings1311" target="_blank">YouTube</a>
-  <a href="#top">Back to Top</a>
-</div>
-</footer>
-<script>
-  function toggleTextSize() {
-    document.body.classList.toggle('big-text');
-  }
-</script>
 
+    window.onload = () => {
+      showCategory('all');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('show');
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.product').forEach(product => observer.observe(product));
+    }
+  </script>
 </body>
 </html>
