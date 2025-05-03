@@ -19,22 +19,21 @@
     }
     header {
       background-color: #d40000;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
-   <img 
-  src="https://github.com/GunnarDearringer/RingKings/blob/main/ChatGPT%20Image%20Apr%201,%202025,%2004_17_12%20PM.png?raw=true" 
-  alt="Ring Kings Logo" 
-  width="100" 
-  style="margin-bottom: 10px; border-radius: 12px; box-shadow: 0 0 10px #000;"
->
-
+    header img {
+      width: 100px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #000;
+      margin-bottom: 10px;
+    }
     header h1 {
-      margin: 0;
+      margin: 10px 0 5px;
       font-size: 2.5em;
       animation: bounceIn 0.7s ease;
     }
@@ -43,6 +42,10 @@
       text-shadow: 0 0 10px #000;
       transform: scale(1.03);
       transition: all 0.3s ease;
+    }
+    header p {
+      font-size: 1.2em;
+      letter-spacing: 1px;
     }
     @keyframes bounceIn {
       0% { transform: scale(0.8); opacity: 0; }
@@ -184,177 +187,9 @@
 <body>
 <a id="top"></a>
 <header>
+  <img 
+    src="https://github.com/GunnarDearringer/RingKings/blob/main/ChatGPT%20Image%20Apr%201,%202025,%2004_17_12%20PM.png?raw=true" 
+    alt="Ring Kings Logo">
   <h1>Ring Kings</h1>
   <p>Professional Boxing Gear Reviews</p>
 </header>
-
-<button class="text-toggle" onclick="toggleTextSize()">🅰️ Text Size</button>
-
-<div class="tabs">
-  <button onclick="showCategory('all')">All</button>
-  <button onclick="showCategory('gloves')">Gloves</button>
-  <button onclick="showCategory('bags')">Bags</button>
-  <button onclick="showCategory('wraps')">Wraps</button>
-  <button onclick="showCategory('accessories')">Accessories</button>
-</div>
-
-<div class="product-grid">
- <div class="product gloves">
-  <h2>Venum Challenger 2.0 Boxing Gloves</h2>
-  <img src="https://m.media-amazon.com/images/I/81bTHaa7LWL._AC_SX569_.jpg" width="400">
-  <img src="https://m.media-amazon.com/images/I/81woohigX4L._AC_SX569_.jpg" width="400"> 
-<p>
-    The <strong>Venum Challenger 2.0</strong> gloves offer high-quality construction at an affordable price, making them a favorite for beginners and intermediate fighters alike.
-  </p>
-  <p>
-    Built with durable synthetic leather and <strong>triple-density foam</strong>, they deliver solid shock absorption and knuckle protection whether you're hitting the bag or sparring.
-  </p>
-  <p>
-    The large Velcro strap provides great wrist support and a secure fit. The design is sleek and aggressive, and they come in several color options to match your style.
-  </p>
-  <p>
-    Whether you're boxing, doing Muay Thai, or just training for fitness, these gloves are a great pick for reliable performance at a great value.
-  </p>
-  <a class="button" href="https://amzn.to/428L3AQ">$55.99 on Amazon</a>
-</div>
- <div class="product gloves">
-  <h2>RDX Ego Boxing Gloves</h2>
-  <img src="https://m.media-amazon.com/images/I/71ZMSXEgvBL._AC_SX425_.jpg" width="400">
-  <img src="https://m.media-amazon.com/images/I/71V8dsxPsrL._AC_SL1500_.jpg" width="400"> 
- <p>
-    The <strong>RDX Ego Boxing Gloves</strong> are hands-down one of the best gloves for beginners — combining comfort, durability, and great protection without a high price tag.
-  </p>
-  <p>
-    These gloves are made from tough Maya Hide leather, which means they can take a beating and last for months of training. Inside, they’re packed with <strong>multi-layered padding</strong> that absorbs shock, helping protect your hands whether you're hitting a heavy bag, mitts, or sparring.
-  </p>
-  <p>
-    One of the biggest advantages for beginners is the <strong>extra-secure Velcro wrist strap</strong>. It keeps your wrist aligned properly and reduces the chance of injury, especially if your form isn’t perfect yet. Plus, the built-in ventilation helps keep your hands cool and dry during long sessions.
-  </p>
-  <p>
-    If you’re just getting into boxing, kickboxing, or fitness training and want a glove that feels great, looks clean, and won’t fall apart after a few weeks — this is your go-to.
-  </p>
-  <a class="button" href="https://amzn.to/3Rsyk74">$35.99 on Amazon</a>
-</div>
-    <div class="product gloves">
-  <h2>RIVAL Boxing RB10 Intelli-Shock Bag Gloves</h2>
-  <img src="https://m.media-amazon.com/images/I/71R6tjwHYIL._AC_SX569_.jpg" width="400">
-  <img src="https://m.media-amazon.com/images/I/716nI7dRghL._AC_SX569_.jpg" width="400"> 
-    <p>
-    The <strong>Venum Challenger 2.0 Gloves</strong> are the perfect balance between comfort, durability, and serious style. Designed in Thailand and made with premium synthetic leather, they’re ideal for boxing, kickboxing, and MMA training.
-  </p>
-  <p>
-    With triple-density foam padding, your hands and knuckles are protected through every jab, hook, and uppercut. The large Velcro wrist strap keeps your wrist stable and supported, helping you train longer and harder with less risk.
-  </p>
-  <p>
-    While it’s a premium option, this glove is built to last for years and delivers unmatched comfort — making it a smart investment for serious fighters.
-  </p>
-  <a class="button" href="https://amzn.to/4cesiQX">$224.99 on Amazon</a>
-</div>
-
-<!-- Bags Section -->
- <div class="product bags" style="display:none;">
-  <h2>UFC Octagon Camo Heavy Bag - 70 lbs</h2>
-  <img src="https://m.media-amazon.com/images/I/61DRTXnl76L._AC_SX569_.jpg" width="175">
-  <img src="https://m.media-amazon.com/images/I/71wy4+P6QZL._AC_SX569_.jpg" width="400">
-  <ul>
-    <li><strong>Ultra-tough outer shell</strong> made with PVC/polyester – built for years of punishment</li>
-    <li><strong>Pre-filled</strong> to 70 lbs – great resistance with realistic swing</li>
-    <li><strong>Camo octagon design</strong> + UFC branding – bold, pro-grade look</li>
-    <li><strong>Includes heavy-duty chains & swivel</strong> – easy to hang right away</li>
-    <li><strong>Perfect for kicks, knees, combos</strong> – not just punching</li>
-  </ul>
-  <p>
-    Whether you're a striker or an MMA fighter, this bag delivers both <strong>durability</strong> and <strong>style</strong>. It’s one of the slickest-looking bags in its price range and holds up through intense sessions.
-  </p>
-  <a class="button" href="https://amzn.to/4hY30bi">$169.99 on Amazon</a>
-</div>
-<div class="product bags" style="display:none;">
-  <h2>UFC Octagon Lava Heavy Bag - 100LB</h2>
-  <img src="https://m.media-amazon.com/images/I/81mJlfsZBNL._AC_SX569_.jpg" width="350">
-  <img src="https://m.media-amazon.com/images/I/71EgNUL56yL._AC_SX569_.jpg" width="400">
-   <ul>
-    <li><strong>Heavy-duty synthetic leather</strong> – built to handle years of punches, kicks, elbows, and knees</li>
-    <li><strong>100LB pre-filled weight</strong> – great resistance and swing for realistic striking</li>
-    <li><strong>Bold lava design</strong> – adds serious attitude to your training space</li>
-    <li><strong>Reinforced straps + chain & swivel included</strong> – hang it up and start hitting right away</li>
-    <li><strong>Ideal for MMA and boxing training</strong> – works for all striking styles</li>
-  </ul>
-  <p>
-    This bag isn’t just about performance — it looks 🔥 with its crazy design and bold UFC branding. If you're serious about training and want a bag that can take punishment, the <strong>Octagon Lava 100LB</strong> is a beast.
-  </p>
-  <a class="button" href="https://amzn.to/3RCD4XH">$169.99 on Amazon</a>
-</div>
-<!-- Wraps Section -->
-<div class="product wraps" style="display:none;">
-  <h2>Meister 180" Hand Wraps</h2>
-  <img src="https://m.media-amazon.com/images/I/71u4xVygi5L._AC_SX425_PIcountsize-2,TopRight,0,0_SH20_.jpg" width="400">
-  <img src="https://m.media-amazon.com/images/I/71SFG+weFBL._AC_SX425_.jpg" width="400">
-   <p>
-    The <strong>Meister 180" Hand Wraps</strong> are a must-have for any boxer, MMA athlete, or kickboxer. These wraps offer just the right amount of stretch with their semi-elastic cotton-blend material — giving you a snug, custom fit every time.
-  </p>
-  <p>
-    At 180 inches long, they provide full wrist and knuckle protection without adding bulk. The wraps are breathable, durable, and stay in place throughout your training session thanks to the strong hook-and-loop closure.
-  </p>
-  <p>
-    Whether you’re hitting the heavy bag or sparring, Meister wraps deliver premium support and comfort — all at a price that’s hard to beat.
-  </p>
-  <a class="button" href="https://amzn.to/4lc7T3d">$8.99 on Amazon</a>
-</div>
-<!-- Accessories Section -->
-<div class="product accessories" style="display:none;">
-  <h2>Jump Rope Pro Speed</h2>
-  <img src="https://m.media-amazon.com/images/I/71lPSep1-GL._AC_SX679_.jpg" width="400">
-  <p>
-    A fast, tangle-free jump rope perfect for boxing warmups and conditioning. Comfortable handles and adjustable length make it great for beginners and pros alike.
-  </p>
-  <a class="button" href="https://www.amazon.com/dp/B07DK8TSZC">Buy on Amazon</a>
-</div>
-
-  <!-- Header, tab buttons, and product cards go here -->
-
-  <script>
-    function toggleTextSize() {
-      document.body.classList.toggle('big-text');
-    }
-
-    function showCategory(category) {
-      const allProducts = document.querySelectorAll('.product');
-      allProducts.forEach(product => {
-        product.style.display = 'none';
-        product.classList.remove('show');
-      });
-
-      let selected = category === 'all' ? allProducts : document.querySelectorAll('.' + category);
-      selected.forEach(product => {
-        product.style.display = 'block';
-        setTimeout(() => product.classList.add('show'), 50);
-      });
-
-      document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.tabs button[onclick="showCategory('${category}')"]`)?.classList.add('active');
-    }
-
-    window.onload = () => {
-      showCategory('all');
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('show');
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.product').forEach(product => observer.observe(product));
-    }
-  </script>
-<footer>
-  <p>© 2025 Ring Kings. Created by Gunnar Dearringer.</p>
-  <div class="footer-links">
-    <a href="mailto:Gunnar.dearringer@gmail.com">Contact Me</a>
-    <a href="https://github.com/GunnarDearringer" target="_blank">GitHub</a>
-    <a href="https://www.youtube.com/@Ring_Kings1311" target="_blank">YouTube</a>
-    <a href="#top">Back to Top</a>
-  </div>
-</footer>
-
-</body>
-</html>
