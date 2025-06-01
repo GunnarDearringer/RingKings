@@ -1,195 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ring Kings - Boxing Gear Reviews</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta name="description" content="Ring Kings offers the best beginner boxing gear reviews, gloves, wraps, and bags. Start your training with the right gear.">
-  <meta name="keywords" content="boxing gear, beginner boxing gloves, best wraps 2025, heavy bags, ring kings">
-  <meta name="author" content="Gunnar Dearringer">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #111;
-      color: #fff;
-      scroll-behavior: smooth;
-    }
-    header {
-      background-color: #d40000;
-      padding: 40px 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-    header img {
-      width: 100px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #000;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 2.5em;
-      animation: bounceIn 0.7s ease;
-    }
-    header h1:hover {
-      color: #fff;
-      text-shadow: 0 0 10px #000;
-      transform: scale(1.03);
-      transition: all 0.3s ease;
-    }
-    header p {
-      font-size: 1.2em;
-      letter-spacing: 1px;
-    }
-    @keyframes bounceIn {
-      0% { transform: scale(0.8); opacity: 0; }
-      60% { transform: scale(1.05); opacity: 1; }
-      100% { transform: scale(1); }
-    }
-    .text-toggle {
-      display: none;
-      position: fixed;
-      top: 40px;
-      right: 40px;
-      background-color: #d40000;
-      color: white;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-size: 2em;
-      z-index: 999;
-      cursor: pointer;
-      box-shadow: 0 0 10px #000;
-      transition: transform 0.3s ease;
-    }
-    .text-toggle:hover {
-      transform: scale(1.05);
-    }
-    @media (max-width: 1200px) {
-      .text-toggle { display: block; }
-    }
-    body.big-text { font-size: 1.25em; }
-    body.big-text h1 { font-size: 2.8em; }
-    body.big-text h2 { font-size: 2em; }
-    body.big-text p,
-    body.big-text li,
-    body.big-text a { font-size: 1.15em; }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .tabs {
-      text-align: center;
-      margin: 40px 0;
-    }
-    .tabs button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      margin: 10px;
-      border-radius: 8px;
-      font-size: 1.1em;
-      cursor: pointer;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.6s ease forwards;
-      transition: background-color 0.2s ease;
-    }
-    .tabs button:hover,
-    .tabs button.active {
-      background-color: #d40000;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .product-grid {
-      display: block;
-    }
-    .product {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 10px #000;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-    .product.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .product:hover {
-      box-shadow: 0 0 15px #d40000;
-      transform: translateY(-5px);
-    }
-    .product img {
-      max-width: 100%;
-      height: auto;
-      transition: transform 0.3s ease;
-    }
-    .product img:hover {
-      transform: scale(1.03);
-    }
-    .product h2 {
-      color: #ff3c3c;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #d40000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: box-shadow 0.3s ease, background-color 0.3s ease;
-    }
-    .button:hover {
-      background-color: #ff1f1f;
-      box-shadow: 0 0 10px #ff1f1f;
-    }
-    footer {
-      background-color: #1a1a1a;
-      color: #ccc;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 0.95em;
-      border-top: 1px solid #333;
-    }
-    .footer-links {
-      margin-top: 10px;
-    }
-    .footer-links a {
-      color: #ff3c3c;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s ease;
-    }
-    .footer-links a:hover {
-      color: #fff;
-      text-shadow: 0 0 5px #ff1f1f;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxing Pro Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a id="top"></a>
-<header>
-  <img 
-    src="https://github.com/GunnarDearringer/RingKings/blob/main/ChatGPT%20Image%20Apr%201,%202025,%2004_17_12%20PM.png?raw=true" 
-    alt="Ring Kings Logo">
-  <h1>Ring Kings</h1>
-  <p>Professional Boxing Gear Reviews</p>
-</header>
+    <header class="fade-in">
+        <div class="logo">Boxing Pro Shop</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero fade-in">
+        <h1>Train Like a Champion</h1>
+        <p>Top Quality Boxing Gear For Every Fighter</p>
+        <a href="products.html" class="btn">Shop Now</a>
+    </section>
+
+    <section class="contact fade-in" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us anytime.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Boxing Pro Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
