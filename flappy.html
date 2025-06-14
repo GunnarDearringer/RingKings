@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flappy Ring</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  canvas { background: #70c5ce; display:block; margin: 40px auto; border: 2px solid #000; }
+  .game-over { text-align:center; font-size:2rem; margin-top:20px; }
+</style>
+</head>
+<body>
+<header class="fade-in">
+<div class="logo">Boxing Pro Shop</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+<a href="flappy.html">Game</a>
+</nav>
+</header>
+<canvas id="game" width="400" height="600"></canvas>
+<div id="game-over" class="game-over" style="display:none;">Game Over - Press Space to Restart</div>
+<footer><p>&copy; 2025 Boxing Pro Shop. All rights reserved.</p></footer>
+<script src="cart.js"></script>
+<script src="flappy.js"></script>
+</body>
+</html>
