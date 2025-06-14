@@ -19,6 +19,7 @@
         link.href = item.link;
         link.textContent = 'Buy on Amazon';
         link.target = '_blank';
+        link.className = 'button';
 
         product.appendChild(img);
         product.appendChild(title);
