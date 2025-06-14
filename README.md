@@ -1,6 +1,6 @@
 # Ring Kings
 
-Ring Kings is a simple Amazon affiliate website showcasing popular boxing gear. The website lists a few recommended products with links to Amazon using your affiliate tag.
+Ring Kings is a simple Amazon affiliate website showcasing popular boxing gear. The site lists curated products with affiliate links and now features a more polished design using Google Fonts and styled buttons.
 
 ## Running Locally
 
